@@ -6,6 +6,11 @@ Rails.application.configure do
   # open for github codespaces
   config.hosts << /.*\.github\.dev/
 
+  # Open for vscode simple browser
+  config.action_dispatch.default_headers.merge!({
+    "X-Frame-Options" => "ALLOWALL"
+  })
+
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
 
