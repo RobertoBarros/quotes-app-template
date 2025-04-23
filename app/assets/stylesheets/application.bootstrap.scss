@@ -1,2 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+a {
+  text-decoration: none !important;
+}
+
+main {
+  margin-top: 70px;
+}

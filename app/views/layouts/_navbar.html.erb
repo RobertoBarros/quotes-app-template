@@ -1,0 +1,34 @@
+<!-- filepath: /workspaces/quotes-app/app/views/layouts/_navbar.html.erb -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <!-- Nome do aplicativo alinhado à esquerda -->
+    <%= link_to "Quotes App", root_path, class: "navbar-brand" %>
+
+    <!-- Botão para navegação responsiva -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto d-flex align-items-center">
+        <% if user_signed_in? %>
+          <!-- Nome do usuário logado -->
+          <li class="nav-item">
+            <span class="navbar-text me-3">
+              <%= "Olá, #{current_user.name}" %>
+            </span>
+          </li>
+          <!-- Link de logout -->
+          <li class="nav-item">
+            <%= link_to "Sair", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-secondary btn-sm" %>
+          </li>
+        <% else %>
+          <!-- Link de login -->
+          <li class="nav-item">
+            <%= link_to "Entrar", new_user_session_path, class: "btn btn-success btn-sm" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

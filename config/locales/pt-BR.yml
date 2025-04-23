@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação da Senha"
+        remember_me: "Lembrar-me"
+  errors:
+    messages:
+      blank: "não pode ficar em branco"
+      invalid: "é inválido"
+      taken: "já está em uso"

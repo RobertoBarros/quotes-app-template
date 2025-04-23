@@ -22,6 +22,8 @@ This is a web application for managing quotes (citations) using Ruby on Rails 8 
 - Use only **Bootstrap 5.3 utility classes** for layout and styling.
 - Avoid writing custom CSS unless absolutely necessary.
 - Prefer using Bootstrap components over third-party UI libraries.
+- Use rails helpers like **image_tag** and **link_to** in views.
+- link_to should use turbo_method for verbs like post, put and delete. Example `data: {turbo_method: :delete, turbo_confirm: 'are you sure?'}`
 
 ## Project Organization
 

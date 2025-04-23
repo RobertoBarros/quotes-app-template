@@ -35,6 +35,9 @@ module QuotesApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    #
+    config.i18n.default_locale = :'pt-BR' # Define o idioma padrão como pt-BR
+    config.time_zone = "Brasilia" # Define o fuso horário como Horário de Brasília
 
     # Don't generate system test files.
     config.generators.system_tests = nil
