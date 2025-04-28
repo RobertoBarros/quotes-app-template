@@ -2,6 +2,7 @@ pt-BR:
   activerecord:
     models:
       user: "Usuário"
+      quote: "Frase"
     attributes:
       user:
         name: "Nome"
@@ -9,6 +10,9 @@ pt-BR:
         password: "Senha"
         password_confirmation: "Confirmação da Senha"
         remember_me: "Lembrar-me"
+      quote:
+        author: "Autor"
+        content: "Conteúdo"
   errors:
     messages:
       blank: "não pode ficar em branco"

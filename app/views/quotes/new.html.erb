@@ -1,0 +1,14 @@
+<h2 class="text-center my-4">Adicionar Frase</h2>
+
+<div class="container d-flex justify-content-center">
+  <div class="card p-4 shadow-sm" style="max-width: 800px; width: 100%;">
+    <%= simple_form_for(@quote) do |f| %>
+      <%= f.input :author, input_html: { autofocus: true, required: true } %>
+      <%= f.input :content, as: :text, input_html: { required: true } %>
+      <div class="d-grid">
+        <%= f.button :submit, "Cadastrar", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

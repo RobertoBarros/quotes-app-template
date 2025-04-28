@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :quotes, only: :index
+  resources :quotes, only: [ :index, :new, :create, :destroy ]
 
   get "pages/home"
 

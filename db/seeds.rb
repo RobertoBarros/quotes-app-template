@@ -1,3 +1,8 @@
+Quote.destroy_all
+User.destroy_all
+
+user = User.create!(email: "admin@admin.com", password: "123123", password_confirmation: "123123", name: "Admin")
+
 quotes = [
   { author: "Nelson Mandela", content: "A educação é a arma mais poderosa que você pode usar para mudar o mundo." },
   { author: "Arthur Schopenhauer", content: "O maior erro que um homem pode cometer é sacrificar a sua saúde a qualquer outra vantagem." },
@@ -32,5 +37,7 @@ quotes = [
 ]
 
 quotes.each do |quote|
-  Quote.create!(author: quote[:author], content: quote[:content])
+  Quote.create!(author: quote[:author], content: quote[:content], user: user)
 end
+
+puts "Created #{Quote.count} quotes"
