@@ -6,6 +6,10 @@ Rails.application.configure do
   # open for github codespaces
   config.hosts << /.*\.github\.dev/
 
+  if ENV["CODESPACES"] == "true"
+    config.action_controller.forgery_protection_origin_check = false
+  end
+
   # Open for vscode simple browser
   config.action_dispatch.default_headers.merge!({
     "X-Frame-Options" => "ALLOWALL"
